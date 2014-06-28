@@ -1,2 +1,7 @@
-exercise
+编码练习
 ========
+
+Ruby
+--------
+### Sinatra
+
