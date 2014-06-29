@@ -1,0 +1,43 @@
+<div class="container">
+  <br><br>
+  <div class="page-header">
+    <h4>数据搜索</h4>
+  </div>
+
+    <table class="table table-bordered">
+      <form action="/filter" method="get">
+        <tr>
+          <td width="80">
+            <B>Crc:</B>
+            <input type="text" name="search_crc" value="<%= @crc if @crc %>" />
+          </td>
+          <td width="80">
+            <B>Name:</B>
+            <input type="text" name="search_name" value="<%= @name if @name %>" />
+          </td>
+          <td width="80">
+            <input value="Search" type="submit" class="btn-info"/>
+          </td>
+        </tr>
+      </form>
+    </table>
+
+  <% if @crc_name %>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <tr class="bg-info">
+            <td><B>CRC</B></td>
+            <td><B>名称</B></td>
+            <td><B>其他</B></td>
+          </tr>
+          <% @crc_name.each_index do |index| %>
+            <tr class="active">
+              <td><%= @crc_name[index].crc %></td>
+              <td><%= @crc_name[index].name %></td>
+              <td><a href="/filter">下载 &raquo;</a></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+  <% end %>
+</div>

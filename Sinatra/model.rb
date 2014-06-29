@@ -20,3 +20,6 @@ end
 
 class Info < ActiveRecord::Base
 end
+
+class CrcName < ActiveRecord::Base
+end
